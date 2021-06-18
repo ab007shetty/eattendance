@@ -23,7 +23,7 @@
     pip install -r requirements.txt   
    ```
 
-## Executing
+## Execution
 
 1. Start the express server from the root directory
 
