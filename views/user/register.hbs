@@ -1,0 +1,134 @@
+{{> header}}
+
+<link rel="stylesheet" href="/assets/css/form_style.css" type="text/css">
+
+<!-- Main content -->
+<div class="main-content">
+    <!-- Header -->
+  <section class="section section-shaped section-lg">
+    <div class="shape shape-style-1 bg-gradient-default">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container pt-lg-1">
+        <!-- Table -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card bg-secondary border-0">
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <div class="text-center text-muted mb-4">
+                            <small>Fill in your details.</small>
+                            {{#if hasErrors}}
+                            <div class="alert alert-danger">
+                                {{# each messages}}
+                                <p>{{this}}</p>
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                        </div>
+                        <form method="POST" action="../register/{{session.role}}">
+                            <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                                    </div>
+                                    <input class="form-control" name="name" placeholder="Name" type="text"
+                                        value="{{filledformdata.usernameInput}}"
+                                        style="{{#if filledformdata.usernameInput}}background-color: rgb(232, 240, 254);{{/if}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                    </div>
+                                    <select class="form-control" name="class">
+                                        <option>Class</option>
+                                        <option>A</option>
+                                        <option>B</option>
+                                       
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-books"></i></span>
+                                    </div>
+                                    <input class="form-control" name="rollnumber" placeholder="Roll Number" type="text"
+                                        value="{{filledformdata.rollnumber}}"
+                                        style="{{#if filledformdata.rollnumber}}background-color: rgb(232, 240, 254);{{/if}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                    </div>
+                                    <select class="form-control" name="year">
+                                        <option>Year</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                    </div>
+                                    <input class="form-control" name="email" placeholder="Email" type="email"
+                                        value="{{filledformdata.emailInput}}"
+                                        style="{{#if filledformdata.emailInput}}background-color: rgb(232, 240, 254);{{/if}}"
+                                        readonly>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                    </div>
+                                    <input class="form-control" name="password" placeholder="Password" type="password">
+                                </div>
+                            </div>
+
+                            <div class="row my-4">
+                                <div class="col-12">
+                                    <div class="custom-control custom-control-alternative custom-checkbox">
+                                        <input class="custom-control-input" name="student" id="student" type="checkbox"
+                                            value="1">
+                                        <label class="custom-control-label" for="student">
+                                            <span class="text-muted">Click if you are registering as a student</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary mt-4">Create account</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</div>
+
+{{> footer_index}}

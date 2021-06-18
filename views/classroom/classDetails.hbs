@@ -1,0 +1,229 @@
+{{> teacher-sidenav title="Classes"}}
+
+<!-- Main content -->
+<div class="main-content" id="panel">
+    <!-- Topnav -->
+    <div class="container-fluid py-3 bg-primary top-padding" style="border-bottom:0.0625rem solid #e9ecef33 !important;" >
+        <div class="row align-items-center">
+            <div class="col col-lg-auto text-center text-sm-left">
+                <h5 style="font-family:'Lobster', cursive;" class="h2 text-white d-inline-block mb-0 custom-heading">
+                    {{this.classroom.name}} - {{this.classroom.description}}
+                </h5>
+            </div>
+            {{#if errorMsg}}
+            <div class="mx-auto mb-0 text-center"> 
+                    <div class="alert alert-danger fade show " role="alert">
+                    <span class="alert-text mr-2 ">
+                        {{errorMsg}}
+                    </span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>  
+            </div>
+            {{/if}}
+            <div class="col-right ml-auto mr-3 d-none d-sm-block">
+                <div class="media align-items-center">
+                    <div class="media-body  ml-2">
+                        <h4 class="mb-0  " style="color: white;font-family:'Lobster', cursive;">Welcome
+                            <b>{{this.user.name}}</b>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-sm-auto">
+                        <nav aria-label="breadcrumb" class="">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark p-2 bg-white">
+                                <li class="breadcrumb-item"><a href="/"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="/classroom/teacher-classrooms">Classrooms</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{this.classroom.name}}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="col text-center text-sm-right" style="margin-bottom: 0.5rem;">
+                        {{!-- <div class="h5  text-white mb-0"><b>Class code : </b></div>
+                        <div class="h4 text-white mb-0 mr-2">{{this.classroom.classCode}}</div> --}}
+                        <div style="color: white; font-size:1.5rem;display:inline">
+                            <b style="font-size:1.2rem;">Class code :</b> {{this.classroom.classCode}}
+                        </div>
+                        {{!-- <a href="/classroom/{{this.classroom._id}}/copyCode/{{this.classroom.classCode}}" class="btn btn-sm btn-neutral">
+                            <i class="fas fa-clipboard" aria-hidden="true"></i> Copy code</a> --}}
+                        <div class="btn btn-sm btn-neutral copy-code" data-code="{{this.classroom.classCode}}" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
+                            <i class="fas fa-clipboard" aria-hidden="true"></i> Copy code
+                        </div>
+                    </div>
+   
+                </div>
+
+                <!-- Card stats -->
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Classrooms</h5>
+                                        <span class="h2 font-weight-bold mb-0">{{totClass}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                            <i class="ni ni-active-40"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Students Enrolled in
+                                            {{this.classroom.name}}
+                                        </h5>
+                                        <span class="h2 font-weight-bold mb-0">{{totStu}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div
+                                            class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                            <i class="ni ni-chart-pie-35"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Lectures Of
+                                            {{this.classroom.name}} Conducted
+                                        </h5>
+                                        <span class="h2 font-weight-bold mb-0">{{# if this.classroom.totLec}}
+                                            {{this.classroom.totLec}} {{else}} 0 {{/if}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                                            <i class="ni ni-money-coins"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Average
+                                            {{this.classroom.name}} Attendance</h5>
+                                        <span class="h2 font-weight-bold mb-0">{{totP}}%</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                                            <i class="ni ni-chart-bar-32"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Page content -->
+    <div class="container-fluid mt--5 ">
+        <div class="col-xl-10 offset-xl-1">
+            <div class="card">
+                <div class="card-header border-0 {{this.classroom.colour}}">
+                    <div class="row align-items-center">
+                        <div class="col text-center text-sm-left">
+                            <h3 class="mb-2">Students Enrolled</h3>
+                        </div>
+                        <div class="col-right mx-auto mr-sm-2 mb-2">
+                            <a href="/classroom/take_attendance/{{this.classroom._id}}"
+                                class="btn btn-sm btn-primary"> <i class="fas fa-camera text-white mr-2"></i>Take
+                                Attendance</a>
+                        </div>
+                        <div class="col-right mx-auto mb-2">
+                            <a href="/classroom/class-details/{{this.classroom._id}}/students/new"
+                                class="btn btn-sm btn-primary"> <i class="fas fa-plus text-white mr-2"></i>Add
+                                Students</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <!-- Projects table -->
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Roll number</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Lectures</th>
+                                <th scope="col">
+                                    <div style="padding-left: 50px;">Attendance</div>
+                                </th>
+                                <th scope="col">Remove A Student</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each students}}
+                            <tr>
+                                <th scope="row">{{rollnumber}}</th>
+                                <th scope="row">{{name}}</th>
+                                <td>{{email}}</td>
+                                <td>
+                                    <div style="padding-left: 25px;">{{counts}}</div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="mr-2">{{percent}}%</span>
+                                        <div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-gradient-danger" role="progressbar"
+                                                    aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="100"
+                                                    style="width: {{percent}}%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="padding-left: 40px;">
+                                        <a href="/classroom/class-details/{{../this.classroom._id}}/students/remove/{{this._id}}"
+                                            class="btn btn-sm btn-danger" style="font-size: 10px">
+                                            <i class="fas fa-minus text-white"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {{/each}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer}}

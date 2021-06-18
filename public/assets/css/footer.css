@@ -1,0 +1,27 @@
+
+.social-network {
+    margin-top: 60px;
+}
+
+.social-network span {
+    margin: 0 3px;
+}
+
+ .social-network span a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgba(217, 15, 136,1);
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.5s;
+}
+
+ .social-network span a:hover {
+    background-color: #fff;
+    color: #a43f49;
+}
+
+

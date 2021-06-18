@@ -1,0 +1,11 @@
+CMake
+dlib
+face_recognition
+numpy
+pandas
+xlrd
+opencv-python
+xlsxwriter
+openpyxl
+beepy
+pymongo

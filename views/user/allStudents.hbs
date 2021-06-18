@@ -1,0 +1,82 @@
+{{> teacher-sidenav title="Students"}}
+
+<!-- Main content -->
+<div class="main-content">
+    <!-- Header -->
+    <div class="header bg-gradient-primary py-6 py-lg-7 pt-lg-8">
+        <div class="container">
+            <div class="header-body text-center mb-4">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-8 col-md-8 px-10">
+                        <h1 class="text-white">All Students</h1>
+                        <p class="text-lead text-white">Check out all the students who have registered with our portal!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator separator-bottom separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+                xmlns="http://www.w3.org/2000/svg">
+                <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="container-fluid mt--6 ">
+        <div class="col-sm-10 offset-sm-1" >
+            <div class="card">
+                <div class="card-header border-0">
+                    <div class="row align-items-center">
+                        <div class="col-sm-7 offset-sm-2 text-center">
+                            <h3 class="mb-2">View The List Of Students</h3>
+                        </div>
+                        <div class="col text-center">
+                            <a href="/user/filter" class="btn btn-sm btn-primary mb-2"> <i class="fas fa-filter text-white mr-2"></i>Filters</a>
+                            {{#if filterActive}}
+                            <a href="/user/allStudents"
+                                class="btn btn-sm btn-danger mb-2">Remove Filter</a>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <!-- Projects table -->
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Roll number</th>
+                                <th scope="col">
+                                    <div style="padding-left: 35px;">Email</div>
+                                </th>
+                                <th scope="col">Class</th>
+                                <th scope="col">Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each users}}
+                            <tr>
+                                <th scope="row">{{this.name}}</th>
+                                <td>{{this.rollnumber}}</td>
+                                <td>{{this.email}}</td>
+                                <td>
+                                    <div style="padding-left: 10px;">{{this.class}}</div>
+                                </td>
+                                <td>
+                                    <div style="padding-left: 10px;">{{this.year}}</div>
+                                </td>
+
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{> footer}}

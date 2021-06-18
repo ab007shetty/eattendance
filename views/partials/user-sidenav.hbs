@@ -1,0 +1,75 @@
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/footer.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/sidenav.css" type="text/css">
+    <script src="/assets/js/sidenav.js"></script>
+</head>
+<!-- Sidenav -->
+<div class="overlay"></div>
+<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <div class="scrollbar-inner">
+        <!-- Brand -->
+        <div class="sidenav-header mt--3 align-items-center">
+            
+            <a class="navbar-brand" href="/">
+                <img src="/assets/img/T1.png" width="100%">              
+            </a>
+            <img src="/assets/img/student.jpg" width="80%">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <div class="navbar-inner mt-7">
+            <!-- Collapse -->
+            <div class="" id="sidenav-collapse-main">
+                <!-- Nav items -->
+                <ul class="navbar-nav">
+
+                    <li class="nav-item mt-1">
+                        <a {{# ifCond title '==' "Classes" }} class="nav-link active" {{else}} class="nav-link"
+                            {{/ifCond}} href="/classroom/userClasses">
+                            <i class="ni ni-bullet-list-67 text-default"></i>
+                            <span class="nav-link-text">Classrooms</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-1">
+                        <a {{# ifCond title '==' "Profile" }} class="nav-link active" {{else}} class="nav-link"
+                            {{/ifCond}} href="/user/profile">
+                            <i class="ni ni-single-02 text-yellow"></i>
+                            <span class="nav-link-text">Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-1">
+                        <a {{# ifCond title '==' "Upload" }} class="nav-link active" {{else}} class="nav-link"
+                            {{/ifCond}} href="/user/upload">
+                            <i class="ni ni-circle-08 text-pink"></i>
+                            <span class="nav-link-text">Upload Image</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-1">
+                        <a {{# ifCond title '==' "Defaulter" }} class="nav-link active" {{else}} class="nav-link"
+                            {{/ifCond}} href="/classroom/defaulterClasses">
+                            <i class="ni ni-single-02 text-red"></i>
+                            <span class="nav-link-text">My Defaulter Classes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-2">
+                        <a {{# ifCond title '==' "Logout" }} class="nav-link active" {{else}} class="nav-link"
+                            {{/ifCond}} href="/user/logout">
+                            <i class="ni ni-user-run"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <i class="fas fa-align-left"></i>
+        <span></span>
+    </button>
+</nav>

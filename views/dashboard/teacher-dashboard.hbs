@@ -1,0 +1,185 @@
+{{> teacher-sidenav title="Dashboard"}}
+
+<!-- Main content -->
+<div class="main-content" id="panel">
+    <!-- Topnav -->
+    <div class="container-fluid py-3 bg-primary " style="border-bottom:0.0625rem solid #e9ecef33 !important;" >
+        <div class="row align-items-center">
+            <div class="col text-center text-sm-left">
+                <h5 style="font-family:'Lobster', cursive;" class="h2 text-white d-inline-block mb-0 custom-heading" >Dashboard</h5>
+            </div>
+            <div class="col-right mr-3 d-none d-sm-block">
+                <div class="media align-items-center">
+                    <div class="media-body  ml-2">
+                        <h4 class="mb-0  " style="color: white;font-family:'Lobster', cursive;">Welcome
+                            <b>{{this.user.name}}</b>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header bg-primary pb-3">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-sm-auto">
+                        <nav aria-label="breadcrumb" class="">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark p-2 bg-white">
+                                <li class="breadcrumb-item"><a href="/"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="/classroom/teacher-classrooms">Classrooms</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Card stats -->
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Classrooms</h5>
+                                        <span class="h2 font-weight-bold mb-0">{{totClass}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                            <i class="ni ni-active-40"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Students Enrolled
+                                        </h5>
+                                        <span class="h2 font-weight-bold mb-0">{{totStu}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div
+                                            class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                            <i class="ni ni-chart-pie-35"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Lectures by
+                                            {{this.user.name}}
+                                        </h5>
+                                        <span class="h2 font-weight-bold mb-0">{{totLec}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                                            <i class="ni ni-money-coins"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Attendance in
+                                            {{this.user.name}}'s class</h5>
+                                        <span class="h2 font-weight-bold mb-0">{{avgPercent}}%</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                                            <i class="ni ni-chart-bar-32"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Page content -->
+
+
+<div class="container"> 
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center text-center">
+                            <div class="col-xl-10">
+                                <h4 class="mb-0">Total attendance percent of all your classes</h4>
+                            </div>
+                             <div class="col-xl-2 text-right">
+                                <a href="/user/classTotAttendPer" class="btn btn-sm btn-primary">See all</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <!-- Projects table -->
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Class Name</th>
+                                    <th scope="col">Total Lectures</th>
+                                    <th scope="col">Attendance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#maxItems 3 totClassAttStats}}
+                                <tr>
+                                    <th scope="row">
+                                        {{className}}
+                                    </th>
+                                    <td>
+                                        <div style="padding-left: 50px;">{{classAttLec}}</div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <span class="mr-2">{{classAttPer}}%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-success" role="progressbar"
+                                                        aria-valuenow="{{classAttPer}}" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: {{classAttPer}}%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {{/maxItems}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+			
+		</div>	
+
+        </div>
+    </div>
+
+    {{> footer}}

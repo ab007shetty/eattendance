@@ -1,0 +1,287 @@
+{{> teacher-sidenav title="Classes"}}
+
+<!-- Main content -->
+<div class="main-content" id="panel">
+    <!-- Topnav -->
+    <div class="container-fluid py-3 bg-primary " style="border-bottom:0.0625rem solid #e9ecef33 !important;">
+        <div class="row align-items-center">
+            <div class="col text-center text-sm-left">
+                <h5 style="font-family:'Lobster', cursive;" class="h2 text-white d-inline-block mb-0 custom-heading">
+                    Classrooms</h5>
+            </div>
+            <div class="col-right mr-3 d-none d-sm-block">
+                <div class="media align-items-center">
+                    <div class="media-body  ml-2">
+                        <h4 class="mb-0  " style="color: white;font-family:'Lobster', cursive;">Welcome
+                            <b>{{this.user.name}}</b>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <div class="header bg-primary pb-3">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-sm-auto">
+                        <nav aria-label="breadcrumb" class="">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark p-2 bg-white">
+                                <li class="breadcrumb-item"><a href="/"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="/user/dashboard">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Classrooms</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="col-auto ml-sm-auto" style="margin-bottom: 1rem;">
+                        <a href="/classroom/create-class" class="btn btn-sm btn-neutral p-2"> <i
+                                class="fas fa-plus text-primary mr-1"></i>
+                            Create New Classroom</a>
+                    </div>
+                </div>
+
+                <!-- Card stats -->
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Classrooms</h5>
+                                        <span class="h2 font-weight-bold mb-0">{{totClass}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                            <i class="ni ni-active-40"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Students Enrolled
+                                        </h5>
+                                        <span class="h2 font-weight-bold mb-0">{{totStu}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div
+                                            class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                            <i class="ni ni-chart-pie-35"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Total Lectures by
+                                            {{this.user.name}}
+                                        </h5>
+                                        <span class="h2 font-weight-bold mb-0">{{totLec}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                                            <i class="ni ni-money-coins"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Attendance in
+                                            {{this.user.name}}'s class</h5>
+                                        <span class="h2 font-weight-bold mb-0">{{avgPercent}}%</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                                            <i class="ni ni-chart-bar-32"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Page content -->
+    <div class="container-fluid">
+        <div class="row ">
+            {{#each classrooms as |class i|}}
+            <div class="col-xl-4 mt--2">
+                <div class="card">
+                    <div id="cardHead" class="card-header border-0 {{class.colour}}">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-1">{{class.name}}</h3>
+                            </div>
+                            <div class="col text-right">
+                                <a href="/classroom/class-details/{{class._id}}"
+                                    class="btn btn-sm btn-primary mb-1 mr-auto ">See
+                                    all</a>
+
+                                <a href="#"
+                                    class="btn btn-sm btn-danger mb-1 mr-auto" data-toggle="modal"
+                  data-target="#deleteClassroomModal{{i}}">Delete</a>
+
+                                <button data-toggle="modal" data-target="#editClassModal{{i}}" type="button"
+                                    class="btn btn-sm btn-light mb-1 mr-auto"><i
+                                        class="ni ni-settings-gear-65"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Lectures</th>
+                                    <th scope="col">
+                                        <div style="padding-left: 50px;">Attendance</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#maxItems 1 studentDetails}}
+                                <tr>
+                                    <th scope="row">{{name}}</th>
+                                    <td>
+                                        <div style="padding-left: 25px;">{{counts}}</div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <span class="mr-2">{{percent}}%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-danger" role="progressbar"
+                                                        aria-valuenow="{{percent}}" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: {{percent}}%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {{/maxItems}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="editClassModal{{i}}" tabindex="-1" role="dialog"
+                aria-labelledby="editClassModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="" id="exampleModalLabel" style="font-family:'Lobster', cursive;color:#5e72e4;">
+                                Change your class details</h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" action="/classroom/teacher-classroom/edit/{{class._id}}">
+
+
+                                <div class="form-group">
+                                    <div class="input-group input-group-merge input-group-alternative mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                        </div>
+                                        <input value="{{class.name}}" class="form-control" name="name"
+                                            placeholder="Name" type="text" style="{{#if class.name}}{{/if}}">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group input-group-merge input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-books"></i></span>
+                                        </div>
+                                        <input value="{{class.description}}" class="form-control" name="description"
+                                            placeholder="Description" type="textarea"
+                                            style="{{#if class.description}}{{/if}}">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <select name="colour">
+                                        <option value="bg-gradient-red">Red</option>
+                                        <option value="bg-gradient-green">Green</option>
+                                        <option value="bg-gradient-cyan">Cyan</option>
+                                        <option value="bg-gradient-purple">Purple</option>
+                                        <option value="bg-gradient-yellow">Yellow</option>
+                                        <option value="bg-gradient-orange">Orange</option>
+                                        <option value="bg-gradient-gray">Gray</option>
+                                        <option value="bg-gradient-pink">Pink</option>
+                                        <option value="bg-gradient-teal">Teal</option>
+                                        <option value="bg-gradient-white">White</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="deleteClassroomModal{{i}}" tabindex="-1" role="dialog" aria-labelledby="deleteClassroomModal"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4 class="" id="exampleModalLabel">Are you sure you want to delete <span class="text-red">{{class.name}} </span> Classroom?</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="text-center">
+          <a href="/classroom/teacher-classroom/delete/{{class._id}}" class="btn btn-danger mt-4">Delete</a>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+
+{{> footer}}

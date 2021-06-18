@@ -1,0 +1,197 @@
+#back-button{
+    display: none;
+    right: 16px;
+}
+
+@media (max-width: 992px){
+    #back-button{
+       display: inline-block;
+    }
+}
+
+/* header_index css */
+.small-screen-nav{
+    display: none;
+    z-index: 20;
+    position: absolute;
+    width: 100%;
+}
+
+.custom-nav-item{
+    border-bottom:0.0625rem solid #e9ecef33 !important;
+}
+
+@media (max-width: 992px){
+    .small-screen-nav{
+       display: inline-block;
+    }
+
+    .custom-nav{
+        display: none;
+    }
+
+    .custom-padding{
+        padding-top: 3rem;
+    }
+}
+
+
+/*
+  ========================================
+  corousel
+  ========================================
+*/
+
+.carousel {
+    background:#512DA8;
+}
+
+.carousel-item {
+  height: 300px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+
+
+.modal-header {
+  background: #512DA8;
+  color: floralwhite; }
+  .modal-header button {
+    color: floralwhite; }
+
+.modal-body {
+  background: #D1C4E9; }
+
+/* Simple Border Button */
+.border-neon {
+    background-color: transparent;
+    border: 2px solid pink;
+    color: yellow;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+ 
+.border-neon:hover, .border-neon:focus {
+    -webkit-box-shadow: inset 0px 0px 8px 3px #ff94b8;
+    box-shadow: 0px 0px 10px 3px #ff94b8, inset 0px 0px 10px 3px #ff94b8;
+    border-color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff94b8, 0 0 40px #ff94b8, 0 0 50px #ff94b8, 0 0 60px #ff94b8, 0 0 70px #ff94b8
+}
+
+
+* Contact Form*/
+.contact-form {
+    padding: 0 10px;
+}
+
+.form-control-sm {
+    border-radius: 0;
+}
+
+/* Button */
+.btn-submit {
+    text-align: center;
+    background-color: #6e91ff;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-transform: none;
+    transition: background-color .8s;
+    border-radius: 25px;
+}
+
+.btn-submit:hover {
+    background-color: #1c50fc;
+    -webkit-transition: background-color .8s;
+    -moz-transition: background-color .8s;
+    -o-transition: background-color .8s;
+    -ms-transition: background-color .8s;
+    transition: background-color .8s;
+}
+
+
+.shadow {
+
+    box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+/* ==================================
+    Right Column
+================================== */
+
+.right-column {
+    background-color: #6e91ff;
+    box-shadow: 0 0 6px 0 hsla(0, 0%, 0%, 0.2);
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-bottom: 50px;
+    padding-left: 30px;
+}
+
+.contact-info h3{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin: 50px auto 30px auto;
+}
+
+/* Social Icons */
+.social {
+    color: #ffffff;
+}
+
+
+/* ==================================
+    Left Column
+================================== */
+
+.left-column {
+    background-color: #ffffff;
+    box-shadow: 0 0 6px 0 hsla(0, 0%, 0%, 0.2);
+    /* box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2); */
+    padding: 30px;
+}
+
+/* Tittle */
+.tittle-container {
+    margin: 10px auto 30px auto;
+}
+
+.tittle {
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+    color: #38436b; 
+}
+
+.subtitle {
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;  
+    color: #c1c5dc;
+}
+
+.bg {
+  /* The image used */
+
+background: url(/assets/img/.jpg) no-repeat 50% 50%;
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

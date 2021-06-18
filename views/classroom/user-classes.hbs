@@ -1,0 +1,238 @@
+{{> user-sidenav title="Classes" }}
+
+<!-- Main content -->
+<div class="main-content" id="panel">
+    <!-- Topnav -->
+    <div class="container-fluid py-3 bg-primary top-padding" style="border-bottom:0.0625rem solid #e9ecef33 !important;" >
+        <div class="row align-items-center">
+            <div class="col col-lg-auto text-center text-sm-left">
+                <h5 style="font-family:'Lobster', cursive;" class="h2 text-white d-inline-block mb-0 custom-heading">Classrooms</h5>
+            </div>
+            <div class="mx-auto mb-0 text-center"> 
+                {{#if errorMsg}}
+                    <div class="alert alert-danger fade show " role="alert">
+                    <span class="alert-text mr-2">
+                        {{errorMsg}}
+                    </span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {{else if successMsg}}
+                <div class="alert alert-success fade show " role="alert">
+                    <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                    <span class="alert-text mr-2"><strong>Success!</strong>
+                        {{successMsg}}
+                    </span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <br>
+                {{/if}}
+            </div>
+            <div class="col-right ml-auto mr-3  d-sm-block">
+                <div class="media align-items-center">
+                    <span class="avatar avatar-sm rounded-circle">
+                        <img alt="" src="/assets/uploads/{{this.user.rollnumber}}.jpg">
+                    </span>
+                    <div class="media-body  ml-2  d-none d-lg-block">
+                        <h4 class="mb-0  " style="color: white;font-family:'Lobster', cursive;">Welcome
+                            <b>{{this.user.name}}</b>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-sm-auto">
+                        <nav aria-label="breadcrumb" class="">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark p-2 bg-white">
+                                <li class="breadcrumb-item"><a href="/"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="/user/dashboard">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Classrooms</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="col text-center text-sm-right">
+                        <form method="POST" action="../classroom/join-class">
+                            <div class="form-group d-inline-block mr-2 mr-sm-0">
+                                <div style="width:155px;" class="input-group mx-auto mr-sm-1">
+                                    <input style="height:30px" class="form-control" name="classCode" type="text">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-neutral"
+                                style="background-color: white;color:#5E72E4"><i
+                                    class="fas fa-plus text-primary mr-2"></i>Join classroom</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Card stats -->
+                <div class="row">
+
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">{{this.user.name}}'s
+                                            Classrooms
+                                        </h5>
+                                        <span class="h2 font-weight-bold mb-0">{{totStuClass}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div
+                                            class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                            <i class="ni ni-chart-pie-35"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                   <div class="row">
+                                    
+                                    <div class="col">                                                                                   
+                                       <a {{# ifCond title '==' "Profile" }} class="nav-link active" {{else}} class="nav-link"
+                            {{/ifCond}} href="/user/profile">
+                            
+                            <h5 class="card-title text-uppercase text-muted mb-0">
+                                            {{this.user.name}}'s Profile</h5>
+                        </a>                                 
+                                    </div>                                
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                                            <i class="ni ni-single-02 text-yellow"></i>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+ <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                   <div class="row">
+                                    
+                                    <div class="col">                                                                                   
+                                      <a {{# ifCond title '==' "Upload" }} class="nav-link active" {{else}} class="nav-link"
+                            {{/ifCond}} href="/user/upload">
+                            
+                            <h5 class="card-title text-uppercase text-muted mb-0">
+                                            Upload Image</h5>
+                        </a>                                 
+                                    </div>                                
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-warning text-white rounded-circle shadow">
+                                            <i class="ni ni-circle-08 text-dark"></i>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                   <div class="row">
+                                    
+                                    <div class="col">                                                                                   
+                                      <a {{# ifCond title '==' "Defaulter" }} class="nav-link active" {{else}} class="nav-link"
+                            {{/ifCond}} href="/classroom/defaulterClasses">
+                            
+                            <h5 class="card-title text-uppercase text-muted mb-0">
+                                            {{this.user.name}}'s Defaulter Classes</h5>
+                        </a>                                 
+                                    </div>                                
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-danger text-white rounded-circle shadow">
+                                            <i class="ni ni-single-02 text-success"></i>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Page content -->
+    <div class="container-fluid mt--5">
+        <div class="row">
+            {{#each classrooms}}
+            <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">{{name}} - {{description}}</h3>
+                                <div style="padding-left: 5px;"> - by <bold>{{teacher}}</bold>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col" style="padding-left: 50px;">Lectures</th>
+                                    <th scope="col">
+                                        <div style="padding-left: 70px;">Attendance</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div style="padding-left: 40px;">{{studentDetails.counts}} / {{totLec}}</div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center" style="padding-left: 20px;">
+                                            <span class="mr-2">{{studentDetails.percent}}%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-danger" role="progressbar"
+                                                        aria-valuenow="{{studentDetails.percent}}" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: {{studentDetails.percent}}%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+{{> footer}}

@@ -1,0 +1,113 @@
+<head>
+<!-- Customerly Live Chat Snippet Code -->
+<script>
+     !function(){var e=window,i=document,t="customerly",n="queue",o="load",r="settings",u=e[t]=e[t]||[];if(u.t){return void u.i("[customerly] SDK already initialized. Snippet included twice.")}u.t=!0;u.loaded=!1;u.o=["event","attribute","update","show","hide","open","close"];u[n]=[];u.i=function(t){e.console&&!u.debug&&console.error&&console.error(t)};u.u=function(e){return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(e),u[n].push(t),u}};u[o]=function(t){u[r]=t||{};if(u.loaded){return void u.i("[customerly] SDK already loaded. Use customerly.update to change settings.")}u.loaded=!0;var e=i.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://messenger.customerly.io/launcher.js";var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};u.o.forEach(function(t){u[t]=u.u(t)})}();
+    
+     customerly.load({
+           "app_id": "8dcc1171"
+           "user_id": ""
+           "name": ""
+           "email": ""
+           
+           
+           //Attributes are the most powerful thing in Customerly. 
+           //Discover more: go.customerly.io/attributes
+           
+           "attributes": {
+               "user_type": "pro" 
+               "phone_number": "+35383940993" 
+               "billing_address": "Ground Floor, 71 Lower Baggot Street, Dublin, D02 P593" 
+           }
+           
+           
+           //If your users can manage different companies in your platform track them this way. 
+           "company": {
+               "company_id": "REPLACE WITH COMPANY ID" 
+               "name": "ACME INC" 
+               //Add any Company properties you might need to track here
+               "plan_type": "Enterprise" 
+           }
+     });
+</script>
+<!-- End of Customerly Live Chat Snippet Code -->
+</head>
+
+{{> header}}
+
+<!-- Login Form -->
+<div class="main-content">
+  <!-- Header -->
+  <!-- Page content -->
+  <section class="section section-lg section-shaped ">
+    <div class="shape shape-style-2 shape-default">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container pt-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <div class="card bg-secondary shadow border-0">
+            <div class="card-header bg-white pb-5">
+              <div class="text-muted text-center mb-3"><small>Sign Up As</small></div>
+              <div class="btn-wrapper text-center">
+                <a href="/user/otp/teacher" class="btn btn-neutral btn-icon">
+                  <span class="btn-inner--icon"><i class=" fas fa-chalkboard-teacher text-dark"></i></span>
+                  <span class="btn-inner--text">Teacher</span>
+                </a>
+                <a href="/user/otp/student" class="btn btn-neutral btn-icon">
+                  <span class="btn-inner--icon"><i class=" fas fa-user-graduate text-dark"></i></span>
+                  <span class="btn-inner--text">Student</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body px-lg-5 py-lg-5">
+                 <div class="text-center text-muted mb-4">
+              <small>Or Sign in with credentials</small>
+              {{#if hasErrors}}
+              <div class="alert alert-danger">
+                {{# each messages}}
+                <p>{{this}}</p>
+                {{/each}}
+              </div>
+              {{/if}}
+            </div>
+            <form action="../user/login" method="post">
+              <div class="form-group mb-3">
+                <div class="input-group input-group-merge input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  </div>
+                  <input class="form-control" name="email" placeholder="Email" type="email">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-merge input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" name="password" placeholder="Password" type="password">
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary my-4">Sign in</button>
+              </div>
+            </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{{> footer_index}}

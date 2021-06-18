@@ -1,0 +1,81 @@
+{{> header}}
+
+<link rel="stylesheet" href="/assets/css/form_style.css" type="text/css">
+
+<!-- Main content -->
+<div class="main-content">
+    <!-- Header -->
+  <section class="section section-shaped section-lg">
+    <div class="shape shape-style-1 bg-gradient-default">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </div>
+    <div class="container pt-lg-5">
+            <div class="header-body text-center mb-4">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+                        <h1 class="text-white">OTP</h1>
+                        <p class="text-lead text-white">Please enter the OTP you have received.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Page content -->
+    <div class="container mt--8 pb-5">
+        <!-- Table -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card bg-secondary border-0">
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <div class="text-center text-muted mb-4">
+                            <h4>OTP Verification</h4>
+
+                            {{#if msg}}
+                            <div class="alert alert-danger">
+                                {{msg}}
+                            </div>
+                            {{else}}
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                                <span class="alert-text"><strong>Success!</strong> We've sent a OTP to your email :
+                                    {{verifyEmail}}
+                                </span>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <br>
+                            {{/if}}
+                        </div>
+                        <form method="POST" action="../verify/{{session.role}}">
+                            <div class="form-group mb-3">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                    </div>
+                                    <input class="form-control" name="otp" placeholder="Enter OTP" type="text">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</div>
+
+{{> footer_index}}

@@ -1,0 +1,242 @@
+{{> user-sidenav title="Profile" }}
+
+
+<div class="wrapper">
+  <!-- Header -->
+ <div class="header bg-gradient-primary ">
+       <div class="container">
+<div class="row">
+          <div class="col-10 ">
+            
+            {{#if success}}
+            <div class="alert alert-success fade show " role="alert">
+              <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+              <span class="alert-text mr-2"><strong>Successfully updated!</strong>
+              </span>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <br>
+            {{/if}}
+
+            {{#if msg}}
+            <div class="alert alert-danger">
+              {{msg}}
+            </div>
+            {{/if}}
+          </div>
+</div>
+    </div>
+
+  </div>
+
+    <!-- Page content -->
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-md-6 offset-md-4">
+
+
+                <div class="card card-profile">
+            <img src="/assets/img/p1.jpg" alt="Image placeholder" class="card-img-top">
+            <div class="row justify-content-center">
+              <div class="col-lg-2 order-lg-2">
+                <div class="card-profile-image ">
+                  <button type="button" data-toggle="modal" data-target="#profilePhotoModal">
+                  <img src="/assets/uploads/{{this.user.rollnumber}}.jpg" class="rounded-circle">
+                </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-header text-center border-0 pt-8 pt-md-6 pb-0 pb-md-4">
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-sm btn-info  mr-4 " data-toggle="modal" data-target="#editProfileModal">Edit</a>
+                <a href="#" class="btn btn-sm btn-danger mb-1 mr-4 float-right" data-toggle="modal"
+                  data-target="#deleteProfileModal">Delete</a>
+              </div>
+            </div>
+
+            <div class="card-body pt-0">
+              <div class="row">
+                <div class="col">
+                  <div class="card-profile-stats d-flex justify-content-center">
+                    <div>
+                      <span class="heading">{{this.user.class}}</span>
+                      <span class="description">Section</span>
+                    </div>
+                   
+                    <div>
+                      <span class="heading">{{this.user.rollnumber}}</span>
+                      <span class="description">USN</span>
+                    </div>
+                     <div>
+                      <span class="heading">{{this.user.year}}</span>
+                      <span class="description">Year</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h5 class="h1">
+                  {{this.user.name}}<span class="font-weight-light"></span>
+                </h5>
+             
+                <div class="h5 mt-4">
+                  <i class="ni business_briefcase-24 mr-2"></i>SMVITM Bantakal
+                </div>
+              
+              </div>
+            </div>
+
+          </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<!-- Profile photo Modal -->
+<div class="modal fade" id="profilePhotoModal" tabindex="-1" role="dialog" aria-labelledby="profilePhotoModal"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="" id="exampleModalLabel">Change your profile photo</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-header">
+        1. The filename must be of the format 'YOUR_ROLLNUMBER.jpg'
+        <br>
+        2. This profile photo will be used for face recognition so make sure your face is clearly visible.
+      </div>
+      <div class="modal-body">
+
+        <form method="POST" enctype="multipart/form-data" action="/user/upload">
+          <div class="form-group">
+            <div class="input-group input-group-merge input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="ni ni-cloud-upload-96"></i></span>
+              </div>
+              <input class="form-control" name="photo" placeholder="photo" type="file">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Edit profile info Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModal"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4 class="" id="exampleModalLabel">Change your personal details</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <form method="POST" action="/user/editUserInfo">
+
+          <div class="form-group">
+            <div class="input-group input-group-merge input-group-alternative mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+              </div>
+              <input class="form-control" name="name" placeholder="Name" type="text" value="{{this.user.name}}"
+                style="{{#if this.user.name}}background-color: rgb(232, 240, 254);{{/if}}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group input-group-merge input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="ni ni-books"></i></span>
+              </div>
+              <input class="form-control" name="rollnumber" placeholder="Roll Number" type="text"
+                value="{{this.user.rollnumber}}"
+                style="{{#if this.user.rollnumber}}background-color: rgb(232, 240, 254);{{/if}}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group input-group-merge input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+              </div>
+              <select style="{{#if this.user.class}}background-color: rgb(232, 240, 254);{{/if}}" class="form-control"
+                name="class">
+                <option>{{this.user.class}}</option>
+                <option>A</option>
+                <option>B</option>
+           
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group input-group-merge input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+              </div>
+              <select style="{{#if this.user.year}}background-color: rgb(232, 240, 254);{{/if}}" class="form-control"
+                name="year">
+                <option>{{this.user.year}}</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary mt-4">Submit</button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="deleteProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModal"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4 class="" id="exampleModalLabel">Are you sure you want to delete your account?</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="text-center">
+          <a href="/user/deleteUser" class="btn btn-danger mt-4">Delete</a>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{{> footer}}

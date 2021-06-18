@@ -1,0 +1,71 @@
+{{> header}}
+
+<link rel="stylesheet" href="/assets/css/form_style.css" type="text/css">
+
+<!-- Main content -->
+<div class="main-content">
+    <!-- Header -->
+  <section class="section section-shaped section-lg">
+    <div class="shape shape-style-1 shape-primary">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container pt-lg-3">
+            <div class="header-body text-center mb-8">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+                        <h1 class="text-white">Email Verification</h1>
+                        <p class="text-lead text-white">Please enter <a class="text-info" href="https://sode-edu.in/" target="_blank">@sode-edu.in </a>  email address for verification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    <!-- Page content -->
+    <div class="container mt--8 pb-7">
+        <!-- Table -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card bg-secondary border-0">
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <div class="text-center text-muted mb-4">
+                            <h4>Enter Email Address</h4>
+                            {{#if hasErrors}}
+                            <div class="alert alert-danger">
+                                {{# each messages}}
+                                <p>{{this}}</p>
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                        </div>
+                        <form method="POST" action="../otp/{{session.role}}">
+                            <div class="form-group mb-3">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                    </div>
+                                    <input class="form-control" name="email" placeholder="Email" type="email">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary mt-4">Verify</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</div>
+
+{{> footer_index}}

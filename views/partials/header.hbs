@@ -1,0 +1,186 @@
+<head>
+    <link rel="stylesheet" href="/assets/css/header.css" type="text/css">
+</head>
+
+<!-- Navbar -->
+<nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
+
+    <div class="container">
+        <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+           
+                 <li class="nav-item list-unstyled">
+                    <a class="navbar-brand" href="/">
+                        <p class="text-white" style="margin-top: 10px; font-size: 20px"><i class="text-white fas fa-camera"></i> E Attendance </p>
+                    </a>
+                </li>
+
+                 <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="/user/about" class="nav-link">
+                        <span class="nav-link-inner--text"><i class="text-white fas fa-info-circle"></i> About</span>
+                    </a>
+                </li>
+
+                 <li class="nav-item">
+                    <a href="/user/contact" class="nav-link">
+                        <span class=" nav-link-inner--text"><i class="text-white fas fa-address-card"></i> Contact</span>
+                    </a>
+                </li>
+
+                {{# if login}}
+                {{# ifEquals this.session.user.who "1"}}
+                <li class="nav-item">
+                    <a href="/classroom/userClasses" class="nav-link">
+                        <span class="nav-link-inner--text"><i class="text-white fas fa-school"></i> Classes</span>
+                    </a>
+                </li>
+                {{/ifEquals}}
+                {{# ifEquals this.session.user.who "0"}}
+                <li class="nav-item">
+                    <a href="/user/dashboard" class="nav-link">
+                        <span class="nav-link-inner--text"><i class="text-white fas fa-chart-line"></i> Dashboard</span>
+                    </a>
+                </li>
+                {{/ifEquals}}
+                {{# ifEquals this.session.user.who "1"}}
+                <li class="nav-item">
+                    <a href="/user/profile" class="nav-link">
+                        <span class="nav-link-inner--text"><i class="text-white fas fa-user-circle"></i> Profile</span>
+                    </a>
+                </li>
+                {{/ifEquals}}
+                {{# ifEquals this.session.user.who "0"}}
+                <li class="nav-item">
+                    <a href="/classroom/teacher-classrooms" class="nav-link">
+                        <span class="nav-link-inner--text"><i class="text-white fas fa-school"></i> Classrooms</span>
+                    </a>
+                </li>
+                {{/ifEquals}}
+                <li class="nav-item">
+                    <a href="/user/logout" class="nav-link">
+                        <span class="nav-link-inner--text"><i class="text-white fas fa-sign-out-alt"></i> Logout</span>
+                    </a>
+                </li>
+                {{else}}
+               
+                <li class="nav-item">
+                    <a href="/user/otp/student" class="nav-link">
+                        <span class="nav-link-inner--text"><i class="text-white fas fa-user-graduate"></i>  Student Registration</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/user/otp/teacher" class="nav-link">
+                        <span class="nav-link-inner--text"><i class="text-white fas fa-chalkboard-teacher"></i> Teacher Registration</span>
+                    </a>
+                </li>
+
+                 <li class="nav-item">
+                    <a href="/user/login" class="nav-link">
+                        <span class="nav-link-inner--text"><i class="text-white fas fa-sign-in-alt"></i> Login</span>
+                    </a>
+                </li>
+                {{/if}}
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+
+
+<div class="small-screen-nav">
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class=" p-4" style="background-color:#172b4d;">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item custom-nav-item">
+                        <a href="/" class="text-white">
+                            <i class="fas fa-home text-primary mr-2"></i>
+                            <span class="nav-link-inner--text">Home</span>
+                        </a>
+                    </li>
+
+                     <li class="nav-item custom-nav-item">
+                        <a href="/user/about" class="text-white">
+                            <i class="fas fa-info-circle text-primary mr-2"></i>
+                            <span class="nav-link-inner--text">About</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item custom-nav-item">
+                        <a href="/user/contact" class="text-white">
+                            <i class="fas fa-address-card text-primary mr-2"></i>
+                            <span class="nav-link-inner--text">Contact</span>
+                        </a>
+                    </li>
+
+                    
+                    {{# if login}}
+                    {{# ifEquals this.session.user.who "1"}}
+                    <li class="nav-item custom-nav-item">
+                        <a href="/classroom/userClasses" class="text-white">
+                            <i class="ni ni-bullet-list-67 text-primary mr-2"></i>
+                            <span class="nav-link-inner--text">Classes</span>
+                        </a>
+                    </li>
+                    {{/ifEquals}}
+                    {{# ifEquals this.session.user.who "0"}}
+                    <li class="nav-item custom-nav-item">
+                        <a href="/user/dashboard" class="text-white">
+                            <i class="ni ni-tv-2 text-primary mr-2"></i>
+                            <span class="nav-link-inner--text">Dashboard</span>
+                        </a>
+                    </li>
+                    {{/ifEquals}}
+                    {{# ifEquals this.session.user.who "1"}}
+                    <li class="nav-item custom-nav-item">
+                        <a href="/user/profile" class="text-white">
+                            <i class="ni ni-single-02 text-primary mr-2"></i>
+                            <span class="nav-link-inner--text">Profile</span>
+                        </a>
+                    </li>
+                    {{/ifEquals}}
+                    {{# ifEquals this.session.user.who "0"}}
+                    <li class="nav-item custom-nav-item">
+                        <a href="/classroom/teacher-classrooms" class="text-white">
+                            <i class="ni ni-bullet-list-67 text-primary mr-2"></i>
+                            <span class="nav-link-inner--text">Classrooms</span>
+                        </a>
+                    </li>
+                    {{/ifEquals}}
+                    <li class="nav-item custom-nav-item">
+                        <a href="/user/logout" class="text-white">
+                            <i class="ni ni-user-run text-primary mr-2"></i>
+                            <span class="nav-link-inner--text">Logout</span>
+                        </a>
+                    </li>
+                    {{else}}
+                   
+                    <li class="nav-item custom-nav-item">
+                        <a href="/user/otp/student" class="text-white">
+                        <i class="fas fa-graduation-cap text-primary mr-2"></i>
+                            <span class="nav-link-inner--text"> Student Registration</span>
+                        </a>
+                    </li>
+                    <li class="nav-item custom-nav-item">
+                        <a href="/user/otp/teacher" class="text-white">
+                            <i class="fas fa-chalkboard-teacher text-primary mr-2"></i>
+                            <span class="nav-link-inner--text"> Teacher Registration</span>
+                        </a>
+                    </li>
+                     <li class="nav-item custom-nav-item">
+                        <a href="/user/login" class="text-white">
+                            <i class="fas fa-sign-in-alt text-primary mr-2"></i>
+                            <span class="nav-link-inner--text">Login</span>
+                        </a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+</div>
