@@ -23,9 +23,9 @@ var classrouter = require('./routes/classroom')
 var app = express();
 	
 
-	mongoose.connect('mongodb+srv://abshetty:xHPl9iJDBtGc8lvQ@eattendance.oxj6e.mongodb.net/eattendance?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true})
+//	mongoose.connect('mongodb+srv://abshetty:xHPl9iJDBtGc8lvQ@eattendance.oxj6e.mongodb.net/eattendance?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true})
 	
-//	mongoose.connect('mongodb://localhost:27017/eattendance',{useNewUrlParser: true, useUnifiedTopology: true})
+	mongoose.connect('mongodb://localhost:27017/eattendance',{useNewUrlParser: true, useUnifiedTopology: true})
    
 
 require('./config/passport');
