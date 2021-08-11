@@ -1,0 +1,658 @@
+[{
+  "_id": {
+    "$oid": "609f9b8015c06915c4b251eb"
+  },
+  "name": "abhidev",
+  "email": "abhidev.17cs001@sode-edu.in",
+  "password": "$2a$05$ZzXjZkO4WyNYw8GcoEPBpetbC8Y8AVzD4ZXvBEeZQFhKhG6pbIEoG",
+  "class": "A",
+  "rollnumber": "4MW17CS001",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609f9d5a15c06915c4b251ed"
+  },
+  "name": "pairaghavendra",
+  "email": "pairaghavendra.16cs049@sode-edu.in",
+  "password": "$2a$05$0JEXtkXko8XNpmyf006n/eabgs0uIsVEXn2FhvmErBHRsaZSf2L5a",
+  "class": "A",
+  "rollnumber": "4MW16CS049",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609f9e5715c06915c4b251f0"
+  },
+  "name": "adithya",
+  "email": "adithya.17cs002@sode-edu.in",
+  "password": "$2a$05$k7nsGA94LmFaS8Xw5HnUmupShK4l4cOFO9KxBnAuzFVJu90ZF2OVS",
+  "class": "A",
+  "rollnumber": "4MW17CS002",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609f9ef915c06915c4b251f2"
+  },
+  "name": "Aishwarya",
+  "email": "aishwarya.17cs003@sode-edu.in",
+  "password": "$2a$05$9V4Chn7gaMftJBR1KpcBGexR7HQfjttCMh9SOQtTrLtd/t4W7iDMe",
+  "class": "A",
+  "rollnumber": "4MW17CS003",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609f9fa015c06915c4b251f4"
+  },
+  "name": "aishwarya k",
+  "email": "aishwarya.17cs004@sode-edu.in",
+  "password": "$2a$05$.RSTPNCvbPZB9mPmuMY4zuB4yGhRrxOEt8uHMIKmA8tsxeyrA5YBq",
+  "class": "A",
+  "rollnumber": "4MW17CS004",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa05115c06915c4b251f6"
+  },
+  "name": "akhilalakshmi",
+  "email": "akhilalakshmi.17cs005@sode-edu.in",
+  "password": "$2a$05$HRCMxVFCJ.Toy9kXVOUwtey43UW8ZRp1XDGNjRm.Z254AKNJEfGZe",
+  "class": "A",
+  "rollnumber": "4MW17CS005",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa11b15c06915c4b251f8"
+  },
+  "name": "akshatha",
+  "email": "akshatha.17cs006@sode-edu.in",
+  "password": "$2a$05$w2uu8LuGu57UEy4jB29ajevTDEHot3NZeNg7Eg/27mkSi4GuACNGC",
+  "class": "A",
+  "rollnumber": "4MW17CS006",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa1b115c06915c4b251fa"
+  },
+  "name": "anjana",
+  "email": "anjana.17cs007@sode-edu.in",
+  "password": "$2a$05$zRYYtg2ONqnNzpePOMKfCOylr8hr0UbLDcQm1ulsj9gbHvZDHfxIC",
+  "class": "A",
+  "rollnumber": "4MW17CS007",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa23b15c06915c4b251fc"
+  },
+  "name": "anupama",
+  "email": "anupama.17cs008@sode-edu.in",
+  "password": "$2a$05$/SwgPpvyp32RMKOlgY/.p.QxiUnduDgtI3J3rJclhFb2ghWvk5F2C",
+  "class": "A",
+  "rollnumber": "4MW17CS008",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa2db15c06915c4b251fe"
+  },
+  "name": "anusha",
+  "email": "anusha.17cs009@sode-edu.in",
+  "password": "$2a$05$C/yg9Ifsn6wVJG6lbVJ/lONMxUTrmp3RgXFd.hgWV8p5yUC8j5Eei",
+  "class": "A",
+  "rollnumber": "4MW17CS009",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa46115c06915c4b251ff"
+  },
+  "name": "ashmitha",
+  "email": "ashmitha.17cs010@sode-edu.in",
+  "password": "$2a$05$BX1A1L/p/Uavksp0/CdfuuJczvZl6z8HqXxXOL5Shp5580km8gF5i",
+  "class": "A",
+  "rollnumber": "4MW17CS010",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa4ff15c06915c4b25201"
+  },
+  "name": "ashutosh",
+  "email": "ashutosh.17cs011@sode-edu.in",
+  "password": "$2a$05$hONBOCanfak1V5PWpOmBrODC3aF/etogU16PAX3d6t3q7hbBmY.xG",
+  "class": "A",
+  "rollnumber": "4MW17CS011",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa58c15c06915c4b25203"
+  },
+  "name": "aysha",
+  "email": "aysha.17cs012@sode-edu.in",
+  "password": "$2a$05$D3JKhKxZjgwUzXfyDYgKfucwg/shtNslwYUyK7z/OjsipuypvE7nW",
+  "class": "A",
+  "rollnumber": "4MW17CS012",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa61d15c06915c4b25205"
+  },
+  "name": "apoorva",
+  "email": "apoorva.17cs013@sode-edu.in",
+  "password": "$2a$05$6/xYFUEH31wPHcxwYLHdgOgv/Kqk7ojxzusn24GU72KlocdHWslu.",
+  "class": "A",
+  "rollnumber": "4MW17CS013",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa76015c06915c4b25208"
+  },
+  "name": "bhoomika",
+  "email": "bhoomika.17cs014@sode-edu.in",
+  "password": "$2a$05$0Vu.BX6Kb9/tAAjt.K1ioeZpyhiWRHt.ShSixYdwhLr/FgRT.92uS",
+  "class": "A",
+  "rollnumber": "4MW17CS014",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa7ee15c06915c4b2520a"
+  },
+  "name": "gagan",
+  "email": "gagan.17cs015@sode-edu.in",
+  "password": "$2a$05$8az6r6IPzRozJPXrr/a3JeM9NWZ584sbOlzMjEQl/ye/ceK2hQ0bK",
+  "class": "A",
+  "rollnumber": "4MW17CS015",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa87b15c06915c4b2520c"
+  },
+  "name": "charitha",
+  "email": "charitha.17cs016@sode-edu.in",
+  "password": "$2a$05$hfQadYUC5wz8FGo5tRhkq.twWojXaysCpAbbsARuQes04Tg8zKUYK",
+  "class": "A",
+  "rollnumber": "4MW17CS016",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa93315c06915c4b2520e"
+  },
+  "name": "harshavardhan",
+  "email": "harshavardhan.14cs029@sode-edu.in",
+  "password": "$2a$05$NXcFgF/06URskUa320NE4eVYZT06YpCcMqZ1crvEJ9Vbm/8PDJAfm",
+  "class": "A",
+  "rollnumber": "4MW14CS029",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fa9fd15c06915c4b25210"
+  },
+  "name": "nahush bharadwaj",
+  "email": "nahushbharadwaj.15cs047@sode-edu.in",
+  "password": "$2a$05$SenuSwCfUgUiJfwmOLmPeuBxyTBKQEBXa7Ykyvcbps7bD26n3eD82",
+  "class": "A",
+  "rollnumber": "4MW15CS047",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609faad615c06915c4b25212"
+  },
+  "name": "mahit",
+  "email": "mahit.16cs036@sode-edu.in",
+  "password": "$2a$05$I.gku9cSjKc7.yD6it7az.1LSSFIkMh9oDN/nmZWSPLaey9/Jbl0i",
+  "class": "A",
+  "rollnumber": "4MW16CS036",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fab6915c06915c4b25214"
+  },
+  "name": "chetan",
+  "email": "chetan.17cs017@sode-edu.in",
+  "password": "$2a$05$7ZC.LUkO4DUijrxUZyhkoek2qV/S8L/seLJw95gagnpEItHHV9czK",
+  "class": "A",
+  "rollnumber": "4MW17CS017",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fac5915c06915c4b25216"
+  },
+  "name": "chethana",
+  "email": "chethana.17cs018@sode-edu.in",
+  "password": "$2a$05$IAapGney54oFf6AiWYJUeuWlfPjlexm95ZSmYufbSd2usyL3eUjci",
+  "class": "A",
+  "rollnumber": "4MW17CS018",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609facef15c06915c4b25218"
+  },
+  "name": "chintan",
+  "email": "chintan.17cs019@sode-edu.in",
+  "password": "$2a$05$RPiriYFnQR9ldNzOqN473uI77q75PvbuZHGKoKVzEA7wzB4qukY06",
+  "class": "A",
+  "rollnumber": "4MW17CS019",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fadf215c06915c4b2521a"
+  },
+  "name": "deeksha",
+  "email": "deeksha.17cs020@sode-edu.in",
+  "password": "$2a$05$xdKkhfIvU2xj9VYQdG7vtO8MgpkxDdLKYyGVxcckc9d2L2cwSX1WG",
+  "class": "A",
+  "rollnumber": "4MW17CS020",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609faef515c06915c4b2521c"
+  },
+  "name": "deekshitha",
+  "email": "deekshitha.17cs021@sode-edu.in",
+  "password": "$2a$05$cUyH2HA.BKSlEbvyPXHLFexIDprsZqDzGf39Raklhap2R3bmFOjlq",
+  "class": "A",
+  "rollnumber": "4MW17CS021",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609faf8915c06915c4b2521e"
+  },
+  "name": "deepak",
+  "email": "deepak.17cs022@sode-edu.in",
+  "password": "$2a$05$XxDnZzrDCo6ojUdaFEQUdOT4RT28o1vfHHpL4vMWMA6.Q.ZbM6o7W",
+  "class": "A",
+  "rollnumber": "4MW17CS022",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb02015c06915c4b25220"
+  },
+  "name": "deepith",
+  "email": "deepith.17cs023@sode-edu.in",
+  "password": "$2a$05$LzBj5b7bwYGw2fd8t1E78ONGNtSfQXV5VcdY2f8ob0q04dvmmjz2e",
+  "class": "A",
+  "rollnumber": "4MW17CS023",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb0a515c06915c4b25222"
+  },
+  "name": "deepti",
+  "email": "deepti.17cs024@sode-edu.in",
+  "password": "$2a$05$g.wv5wECH4TE6J2ITTXC0eEfZJaqrtZr3qgDw0KfWwrwDguuswDKO",
+  "class": "A",
+  "rollnumber": "4MW17CS024",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb16c15c06915c4b25224"
+  },
+  "name": "dhanaraj",
+  "email": "dhanaraj.17cs025@sode-edu.in",
+  "password": "$2a$05$5TGCAFVngNdSqvWct66psO2CW84WZpsI/AJIePQUgrGHGyjj8WYKG",
+  "class": "A",
+  "rollnumber": "4MW17CS025",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb21315c06915c4b25226"
+  },
+  "name": "dhanushree",
+  "email": "dhanushree.17cs026@sode-edu.in",
+  "password": "$2a$05$kI/6VxAmw7GS4iXsvwLBaOZ3c3Dapgh7ShqFRdNkk8/B/mWGBS6GO",
+  "class": "A",
+  "rollnumber": "4MW17CS026",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb2a115c06915c4b25228"
+  },
+  "name": "disha",
+  "email": "disha.17cs027@sode-edu.in",
+  "password": "$2a$05$6dJ.a4agkXr6LN0d/RqRqO.9wIlUzS.NoejdMMl7cdxuJkHufGc.W",
+  "class": "A",
+  "rollnumber": "4MW17CS027",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb32715c06915c4b2522a"
+  },
+  "name": "faheem",
+  "email": "faheem.17cs029@sode-edu.in",
+  "password": "$2a$05$KxyN2Xji0VRmSLUZFlKcKeKBKtW4nujUsnEqcLYJovbNESCjCMkj6",
+  "class": "A",
+  "rollnumber": "4MW17CS029",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb3b915c06915c4b2522c"
+  },
+  "name": "ganesha",
+  "email": "ganesha.17cs030@sode-edu.in",
+  "password": "$2a$05$g2e5dih6pOYCiZOhRC69.OfDPpjzk9LqSGjATWOeajHzvMcdgQ2AG",
+  "class": "A",
+  "rollnumber": "4MW17CS030",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb46715c06915c4b2522e"
+  },
+  "name": "ganpat",
+  "email": "ganpat.17cs031@sode-edu.in",
+  "password": "$2a$05$eOxRPezqkvbYXuDusbQQmezfreqy7yCK3OFw1SxGehUjHD0E8qi6K",
+  "class": "A",
+  "rollnumber": "4MW17CS031",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb50915c06915c4b25230"
+  },
+  "name": "hansen",
+  "email": "hansen.17cs032@sode-edu.in",
+  "password": "$2a$05$fkmc7kDshtXdnYJ.R56D9unhxudbk6K9UpT0.9/kQX0zsayQEqAnO",
+  "class": "A",
+  "rollnumber": "4MW17CS032",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb5b615c06915c4b25232"
+  },
+  "name": "vidya",
+  "email": "vidya.16cs106@sode-edu.in",
+  "password": "$2a$05$PDqAtyii62DuMSAt1eDT0.Y8dnHyRioVooZqrF1iNS39PJvEF51.W",
+  "class": "A",
+  "rollnumber": "4MW16CS106",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb67a15c06915c4b25234"
+  },
+  "name": "harikrishna",
+  "email": "harikrishna.17cs033@sode-edu.in",
+  "password": "$2a$05$l2O9mkN2F0/KvNMXci.bE.EYvhKZTNyHJstQ4gm9VVNz04pme9Rs6",
+  "class": "A",
+  "rollnumber": "4MW17CS033",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb70e15c06915c4b25236"
+  },
+  "name": "harsha",
+  "email": "harsha.17cs034@sode-edu.in",
+  "password": "$2a$05$jDDnSWcK3fGR2rjVysFvyediU2YWQPlWp0OfjxeYoue3sgEW61B8C",
+  "class": "A",
+  "rollnumber": "4MW17CS034",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fb7ba15c06915c4b25238"
+  },
+  "name": "jeevan",
+  "email": "jeevan.17cs035@sode-edu.in",
+  "password": "$2a$05$0OlEcvfUB6uTyGu032gMD.Jia3k3uDGhp1tZ7RJVg9OvuOu9KL/nC",
+  "class": "A",
+  "rollnumber": "4MW17CS035",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0bc1b65d0071670caa70f"
+  },
+  "name": "jithesh",
+  "email": "jithesh.17cs036@sode-edu.in",
+  "password": "$2a$05$PxKMaexZGPBJCH712gal7.VkP4FPK4Fu9.QADxSbtkFvYdRTJl1Te",
+  "class": "A",
+  "rollnumber": "4MW17CS036",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0bc9f65d0071670caa711"
+  },
+  "name": "sahana",
+  "email": "sahana.17cs037@sode-edu.in",
+  "password": "$2a$05$5KawH/RmqoMfZ6qP4M9q3ugKIo7Mtoe8iK95tpraOmKpRxrwA.DaK",
+  "class": "A",
+  "rollnumber": "4MW17CS037",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0bcf365d0071670caa713"
+  },
+  "name": "shrivathsa",
+  "email": "shrivathsa.17cs038@sode-edu.in",
+  "password": "$2a$05$aqDY9GzPkWPDbl5cHtH5texU8pGRHUvroxQDu55RpeEWbA2Ewj8Wy",
+  "class": "A",
+  "rollnumber": "4MW17CS038",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0bf5765d0071670caa715"
+  },
+  "name": "mahima",
+  "email": "mahima.17cs040@sode-edu.in",
+  "password": "$2a$05$bY2xVHAOkVFJp2rgC5qXK.GCeU1tXqsNT226EV7oCdRkC7FxdUEmu",
+  "class": "A",
+  "rollnumber": "4MW17CS040",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0bfd365d0071670caa717"
+  },
+  "name": "kirthi",
+  "email": "kirthi.17cs039@sode-edu.in",
+  "password": "$2a$05$8h49ZocblomeaKrZDD0EG.7qy5Nds8A5JNNpzt6M9IEm5v1YKuOey",
+  "class": "A",
+  "rollnumber": "4MW17CS039",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0c02465d0071670caa719"
+  },
+  "name": "mahima s ",
+  "email": "mahima.17cs041@sode-edu.in",
+  "password": "$2a$05$aV0qQAGE1J3ShTmjB4SemeiIhBG5RQRI2ueANgK9cHqmuuZId.u3u",
+  "class": "A",
+  "rollnumber": "4MW17CS041",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0c06f65d0071670caa71b"
+  },
+  "name": "meghana",
+  "email": "meghana.17cs042@sode-edu.in",
+  "password": "$2a$05$poq6kukNC.JSGPmnNFpsUe.3pa1nFRxkWXQlf8PIcvteFhJ0AXMcW",
+  "class": "A",
+  "rollnumber": "4MW17CS042",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0c0c165d0071670caa71d"
+  },
+  "name": "mohammed sahil",
+  "email": "mohammedsahil.17cs043@sode-edu.in",
+  "password": "$2a$05$/32fig3faQ6D.d4QJR6B2eDoNTCvMi0ilx3Hjp4XcC1Z5TI.r4TYu",
+  "class": "A",
+  "rollnumber": "4MW17CS043",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0c12265d0071670caa71f"
+  },
+  "name": "mohika",
+  "email": "mohika.17cs044@sode-edu.in",
+  "password": "$2a$05$EecnfkT2YtS1ldgROw.a1uFtIj24KNg77lf5Qbjp8gy5k8EcfcC..",
+  "class": "A",
+  "rollnumber": "4MW17CS044",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0c17665d0071670caa721"
+  },
+  "name": "nischith",
+  "email": "nischith.17cs045@sode-edu.in",
+  "password": "$2a$05$haSdREXFi0eFf24OeYtQJOPVpwtI3fiAupJHAvkUMfyRFo8z8M9UK",
+  "class": "A",
+  "rollnumber": "4MW17CS045",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0c1b965d0071670caa723"
+  },
+  "name": "nishwan",
+  "email": "nishwan.17cs046@sode-edu.in",
+  "password": "$2a$05$SmEgOkvegKb/Kjmjjok3j.7d.EUGE4jw5Z6um1U5bcyacqiyseNWC",
+  "class": "A",
+  "rollnumber": "4MW17CS046",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0c20965d0071670caa725"
+  },
+  "name": "noor banu",
+  "email": "noorbanu.17cs048@sode-edu.in",
+  "password": "$2a$05$AZ/sLm7Bgxo0N/SyYUc82eMSDVM6awGgdiBKaPn93lHjuZ0lyOvBO",
+  "class": "A",
+  "rollnumber": "4MW17CS048",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0c25e65d0071670caa727"
+  },
+  "name": "anirudha",
+  "email": "anirudha.17me010@sode-edu.in",
+  "password": "$2a$05$9Lv7moPFNQIDdrDZ/1LE9OD.yK/40gdlPBgaaDUsHHc5HC9ZHLwxO",
+  "class": "A",
+  "rollnumber": "4MW17CS096",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a0c2be65d0071670caa729"
+  },
+  "name": "preetham",
+  "email": "preetham.17cv020@sode-edu.in",
+  "password": "$2a$05$eet0NlBEwRo8EkuOGhFcUOKXAB7gBAxFFIxPBCrl/H1zYES3XqLlO",
+  "class": "A",
+  "rollnumber": "4MW17CS097",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a211c39ebfb5419059df27"
+  },
+  "name": "Ramyashree CSE",
+  "email": "ramyashree.cs@sode-edu.in",
+  "password": "$2a$05$gi.OTj0mWxnnuxY6C/yOV.3FxZmMQcR6x1KsjEwlDo3HOBaGVaPI6",
+  "who": "0",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ad33c51fc3120214825181"
+  },
+  "name": "loyal Sharon",
+  "email": "loyalsharon.15cs043@sode-edu.in",
+  "password": "$2a$05$EnbOa27F8ZQsj0MG/67cYujGE8skqXUkMFrQFaPEldbCobMuqxJyO",
+  "class": "A",
+  "rollnumber": "4MW15CS043",
+  "who": "1",
+  "year": "4",
+  "__v": 0
+}]
