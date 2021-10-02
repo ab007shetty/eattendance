@@ -16,7 +16,7 @@ class MailSender{
             service: 'gmail',
             auth: {
               user: 'eclassroom1999@gmail.com',
-              pass: 'pjlgdzmacjjibryd'
+              pass: 'mloquiqighoyiytq'
             }
           });
         console.log('Mail obj created')
