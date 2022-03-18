@@ -8,7 +8,7 @@
 
 ## Installation
 
-1. Download the repo and Extract It.
+1. Download the repository and Extract It.
 
 2. Install NPM packages, on the root Directory of project
 
