@@ -631,7 +631,7 @@ router.get('/otp/:role', function (req, res, next) {
 router.post('/otp/:role', function (req, res, next) {
   var messages = [];
   if (!validateEmail(req.body.email)) {
-    messages.push("Email Domain: @sode-edu.in required")
+    messages.push("Email Domain: @gmail.com required")
     res.render('user/otpRegistration', { messages: messages, hasErrors: messages.length > 0 });
   }
   else {
@@ -786,7 +786,7 @@ function generateOTP() {
 function validateEmail(email) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (re.test(email)) {
-    if (email.indexOf("@sode-edu.in", email.length - "@sode-edu.in".length) !== -1) {
+    if (email.indexOf("@gmail.com", email.length - "@gmail.com".length) !== -1) {
       return 1
     }
   }

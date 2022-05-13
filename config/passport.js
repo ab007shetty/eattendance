@@ -20,7 +20,7 @@ passport.deserializeUser(function (id, done) {
 function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (re.test(email)) {
-        if (email.indexOf("@sode-edu.in", email.length - "@sode-edu.in".length) !== -1) {
+        if (email.indexOf("@gmail.com", email.length - "@gmail.com".length) !== -1) {
             return 1
         }
     }
@@ -73,7 +73,7 @@ passport.use('local-register', new LocalStrategy({
             return done(null, false, req.flash('error', messages));
         }
         else if (!validateEmail(email)) {
-            messages.push("Email Domain: @sode-edu.in required")
+            messages.push("Email a Valid EMail Address")
             return done(null, false, req.flash('error', messages));
         }
         else if ((validatePassword(password)).length != 0) {
