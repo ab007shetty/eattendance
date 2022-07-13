@@ -6,7 +6,7 @@ module.exports = {
     host: "smtp.gmail.com", // Sender email smtp
     port: "587", // Sender email port
     user: "eclassroom1999@gmail.com", // Sender email username
-    pass: "mloquiqighoyiytq", // Sender email password
+    pass: "khoniclexyscpepy", // Sender email password
 
     // Your email to receive notification (receiver)  
     from: '"E-Attendance" <eclassroom1999@gmail.com>', // Sender email address
