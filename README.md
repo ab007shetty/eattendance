@@ -1,4 +1,6 @@
-# E-Attendance
+# E-Attendance   
+
+For More Info Goto Wiki  https://github.com/ab007shetty/eattendance/wiki
 
 ## Prerequisites
 
